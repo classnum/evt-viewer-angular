@@ -1,18 +1,18 @@
 {
-  "editionTitle": "My Digital Edition",
-  "badge": "alpha",
-  "editionHome": "evt.labcd.unipi.it/",
+  "editionTitle": "Les fragments d’Archestrate de Géla",
+  "badge": "",
+  "editionHome": "",
   "availableEditionLevels": [
     {
       "id": "diplomatic",
       "label": "diplomatic",
-      "enable": true,
-      "hidden": false
+      "enable": false,
+      "hidden": true
     },
     {
       "id": "interpretative",
       "label": "interpretative",
-      "enable": true,
+      "enable": false,
       "hidden": false
     },
     {
@@ -24,7 +24,7 @@
     {
       "id": "changesView",
       "label": "changes",
-      "enable": true,
+      "enable": false,
       "hidden": true
     }
   ],
@@ -40,15 +40,15 @@
     },
     "organizations": {
       "defaultLabel": "Organizations",
-      "enable": true
+      "enable": false
     },
     "relations": {
       "defaultLabel": "Relations",
-      "enable": true
+      "enable": false
     },
     "events": {
       "defaultLabel": "Events",
-      "enable": true
+      "enable": false
     }
   },
   "showLists": true,
@@ -59,14 +59,14 @@
         {
           "value": "persName",
           "label": "persons",
-          "color": "#ffcdd2",
+          "color": "#FFB74D",
           "enable": true
         },
         {
-          "value": "persName[type='episcopus']",
-          "label": "bishops",
+          "value": "name[type='divin']",
+          "label": "Noms divins",
           "color": "rgb(139, 98, 236)",
-          "enable": true
+          "enable": false
         },
         {
           "value": "placeName,geogName",
@@ -78,7 +78,7 @@
           "value": "orgName",
           "label": "organizations",
           "color": "#FFB74D",
-          "enable": true
+          "enable": false
         }
       ],
       "enable": true
@@ -90,38 +90,33 @@
           "value": "event",
           "label": "events",
           "color": "#fcfc60",
-          "enable": true
+          "enable": false
         },
         {
           "value": "rolename",
           "label": "roles",
-          "enable": true
+          "enable": false
         },
         {
           "value": "measure",
           "label": "measures",
-          "enable": true
+          "enable": false
         }
       ],
-      "enable": true
+      "enable": false
     }
   ],
-  "notSignificantVariants": [
-    "type=orthographic"
-  ],
+  "notSignificantVariants": ["type=orthographic"],
   "defaultEdition": "critical",
-  "defaultViewMode": "collation",
+  "defaultViewMode": "imageText",
   "proseVersesToggler": true,
-  "defaultTextFlow": "prose",
+  "defaultTextFlow": "verses",
   "verseNumberPrinter": 5,
   "readingColorLight": "rgb(208, 220, 255)",
   "readingColorDark": "rgb(101, 138, 255)",
   "externalBibliography": {
     "biblAttributeToMatch": "xml:id",
-    "elementAttributesToMatch": [
-      "target",
-      "source"
-    ]
+    "elementAttributesToMatch": ["target", "source"]
   },
   "biblView": {
     "propsToShow": [
@@ -152,9 +147,7 @@
     "Parallel",
     "parallel"
   ],
-  "sourcesExcludedFromListByParent": [
-    "desc"
-  ],
+  "sourcesExcludedFromListByParent": ["desc"],
   "showSubstitutionMarker": true,
   "showSeparatorBetweenChanges": true,
   "startingFromDefinitiveLayer": true,
@@ -171,7 +164,7 @@
       "strato-5": "#100077"
     }
   },
-  "defaultImageZoomLevel": 0.8,
-  "maxImageZoomLevel": 2,
+  "defaultImageZoomLevel": 1,
+  "maxImageZoomLevel": 3,
   "multiPageEngineForCriticalEdition": false
 }

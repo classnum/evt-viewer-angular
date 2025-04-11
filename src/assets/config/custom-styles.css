@@ -1,79 +1,81 @@
+/* DEFAULT EVT CONTENT */
+
 .w .lb {
-    display: none;
+  display: none;
 }
 
 .ab[rend="align-center"] {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 *[rend="strikethrough"] {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 *[rend="overwritten"] {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 *[rend="underline"] {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 *[rend="italic"] {
-    font-style: italic;
+  font-style: italic;
 }
 
 *[rend="erasure"] {
-    background-color: rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
 }
 
 *[rend="cross"] {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 *[rend="line_full_width"] {
-    margin-bottom: 0.1rem;
-    border-bottom: 1px solid black;
-    display: block;
+  margin-bottom: 0.1rem;
+  border-bottom: 1px solid black;
+  display: block;
 }
 
 *[place="superscript"] {
-    vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
 
 evt-page :not(evt-apparatus-entry-detail) .head {
-    font-weight: bold;
-    display: inline-block;
-    padding: 0.5em 0.1em 0.5em 0em;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.5em 0.1em 0.5em 0em;
 }
 
 evt-page :not(evt-apparatus-entry-detail) .closer {
-    display: block;
+  display: block;
 }
 
 evt-page :not(evt-apparatus-entry-detail) .signed {
-    display: inline-block;
-    /* font-style: italic; */
+  display: inline-block;
+  /* font-style: italic; */
 }
 
 evt-page :not(evt-apparatus-entry-detail) .retrace {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 evt-page :not(evt-apparatus-entry-detail) .verse-num {
-    color:black !important;
+  color: black !important;
 }
 
 evt-page :not(evt-apparatus-entry-detail) .verse-num:before {
-    border:none !important;
-    background: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 .metamark[rend="line"] {
-    display: block;
-    border: 1px solid black;
-    margin-top:-1em;
-    margin-right:70%;
+  display: block;
+  border: 1px solid black;
+  margin-top: -1em;
+  margin-right: 70%;
 }
 
 evt-reading evt-note,
@@ -82,10 +84,266 @@ evt-addition evt-note {
 }
 
 .fw {
-    display: block;
+  display: block;
 }
 
 [type="pageNum"][place="top_right"] {
-    float:right;
-    margin-top: -1.5rem;
+  float: right;
+  margin-top: -1.5rem;
+}
+
+
+/* CUSTOM STYLES: CLASSNUM */
+
+body evt-text {
+  font-family: "Libertinus Serif", Times, Junicode, serif;
+  /* font-size: 150%; */
+}
+
+/* display of title page (front matter) */
+
+evt-page[data-id="archestratus_front"] {
+  /* display: inline;
+  vertical-align: middle; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+evt-generic-element.titlepart[type="main"] {
+  color: blue; /* grey; */
+  font-size: 150% !important;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 25em;
+  padding-bottom: 1em;
+  white-space: pre;
+}
+
+evt-generic-element.titlepart[type="sub"] {
+  color: orange; /* grey; */
+  font-size: 120% !important;
+  font-style: italic;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  white-space: pre;
+}
+
+evt-text span {
+  text-align: justify;
+}
+
+/* space between paragraphs */
+evt-paragraph {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+div.app-detail-tabs {
+    display:none;
+}
+
+/* Critical Apparatus panel */
+/* .app-detail-content */
+card-body {
+    background-color: red;
+    /* background-color:#2042512e */
+}
+/* div.card-body { */
+
+/* Notes panel */
+div[id="ngb-nav-3-panel"] {
+  color: red;
+}
+
+/* display of text in dipl and interp */
+/* #text_frame div,
+#text_frame-add div {
+  padding-bottom: 0px;
+  padding-top: 0px;
+} */
+
+/* display of headings in dipl and interp */
+/* h1[data-tagname="head"] {
+  font-weight: bold;
+  padding-bottom: 1.5em;
+}
+
+#text_frame h1[data-tagname="head"] {
+  padding-top: 30px;
+} */
+
+/* display of p containing sources */
+/* p[data-ana="source"] {
+  padding-top: 1.5em;
+  text-align: right;
+} */
+
+/* display of transl div */
+/* div[class="translation_text"]:first-child {
+  margin-top: 100px;
+} */
+
+/* display of specific tags */
+/* .option[data-value="name"][data-type="divin"] .filter_color {
+  color: yellow;
+}
+
+.doc.current span.name[data-type="divin"].list_active,
+.doc.current span.name[data-type="divin"].list_active span.trigger,
+.doc.current span.name[data-type="divin"].over > span.trigger,
+.doc.current span.name[data-type="divin"].opened > span.trigger {
+  background: yellow;
+} */
+
+/* display of notes: numbering */
+
+/* body {
+  counter-reset: css-counter 0;
+}
+
+span.inline_note i.open_note {
+  counter-increment: css-counter 1;
+}
+
+span.inline_note i.open_note:before {
+  content: counters(css-counter, ".") "";
+} */
+
+/* diplay of tooltip boxes containing the text of notes  */
+
+/* span[class="tooltip_text"]:before {
+  content: counters(css-counter, ".") ". ";
+}
+
+span[class="tooltip_text"] {
+  text-align: left;
+} */
+
+/* display of corrections */
+
+/* .dipl-corr {
+  color: blue;
+}
+
+.dipl-sic {
+  color: red;
+}
+
+span.interp-choice_popup_corr span.interp-sic {
+  color: red;
+}
+
+span.interp-choice_popup_corr span.interp-corr {
+  color: blue;
+}
+
+.interp-corr {
+  font-color: blue;
+}
+
+.interp-sic {
+  font-color: red;
+}
+
+.interp-del:before {
+  content: "";
+}
+
+.interp-del:after {
+  content: "";
+}
+
+.interp-del {
+  display: none;
+} */
+
+/* font */
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Semibold.eot");
+  src:
+    local("Libertinus Serif Semibold"),
+    local("LibertinusSerif-Semibold"),
+    url("../fonts/LibertinusSerif-Semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-Semibold.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-Semibold.woff") format("woff"),
+    url("../fonts/LibertinusSerif-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-BoldItalic.eot");
+  src:
+    local("Libertinus Serif Bold Italic"),
+    local("LibertinusSerif-BoldItalic"),
+    url("../fonts/LibertinusSerif-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-BoldItalic.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-BoldItalic.woff") format("woff"),
+    url("../fonts/LibertinusSerif-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Italic.eot");
+  src:
+    local("Libertinus Serif Italic"),
+    local("LibertinusSerif-Italic"),
+    url("../fonts/LibertinusSerif-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-Italic.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-Italic.woff") format("woff"),
+    url("../fonts/LibertinusSerif-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Regular.eot");
+  src:
+    local("Libertinus Serif Regular"),
+    local("LibertinusSerif-Regular"),
+    url("../fonts/LibertinusSerif-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-Regular.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-Regular.woff") format("woff"),
+    url("../fonts/LibertinusSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-Bold.eot");
+  src:
+    local("Libertinus Serif Bold"),
+    local("LibertinusSerif-Bold"),
+    url("../fonts/LibertinusSerif-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-Bold.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-Bold.woff") format("woff"),
+    url("../fonts/LibertinusSerif-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("../fonts/LibertinusSerif-SemiboldItalic.eot");
+  src:
+    local("Libertinus Serif Semibold Italic"),
+    local("LibertinusSerif-SemiboldItalic"),
+    url("../fonts/LibertinusSerif-SemiboldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/LibertinusSerif-SemiboldItalic.woff2") format("woff2"),
+    url("../fonts/LibertinusSerif-SemiboldItalic.woff") format("woff"),
+    url("../fonts/LibertinusSerif-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
 }
